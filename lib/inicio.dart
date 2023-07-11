@@ -8,6 +8,7 @@ class TelaInicio extends StatelessWidget {
   @override
   Widget build(BuildContext context) => MaterialApp(
         home: Scaffold(
+          backgroundColor: Colors.red[50],
           body: Center(
             child: Column(
               children: <Widget>[
