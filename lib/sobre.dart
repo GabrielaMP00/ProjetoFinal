@@ -51,9 +51,9 @@ class Sobre extends StatelessWidget {
               style: TextStyle(color: Colors.black, fontSize: 15),
             ),
             const SizedBox(height: 20),
-            // Título "Orientações"
+            // Título "Desenvolvedores"
             const Text(
-              "Orientações",
+              "Desenvolvedores",
               textAlign: TextAlign.start,
               style: TextStyle(
                 color: Color.fromARGB(255, 67, 5, 7),
