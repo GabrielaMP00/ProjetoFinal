@@ -6,15 +6,18 @@ class TelaFarmacia extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      //AppBar
       appBar: AppBar(
           title: const Text('Medicamentos'), backgroundColor: Colors.red[900]),
       body: ListView(
         children: <Widget>[
+          //Imagem Farmácia
           Padding(
             padding: const EdgeInsets.all(10),
             child: Image.asset('assets/farmacia2.jpg', width: 100, height: 100),
           ),
           const SizedBox(height: 10),
+          //Titulo principal
           const Text('Orientações sobre Medicamentos',
               textAlign: TextAlign.center,
               style: TextStyle(

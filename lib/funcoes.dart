@@ -8,101 +8,85 @@ class TelaFuncoes extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        automaticallyImplyLeading: true,
-        title: const Text('HelpTMO'),
-        backgroundColor: Colors.red[900],
+        appBar: AppBar(
+          // Título da AppBar
+          title: const Text('HelpTMO'),
+          // Cor de fundo da AppBar
+          backgroundColor: Colors.red[900],
+        ),
+        body: Center(
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: <Widget>[
+              //Botão Orientações
+              buildButtonWithImage(
+                'assets/IconeOrientacoes.png',
+                'Orientações',
+                () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => Orientacoes()),
+                  );
+                },
+              ),
+              SizedBox(height: 50),
+              //Botão Informações
+              buildButtonWithImage(
+                'assets/infos.png',
+                'Informações',
+                () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => Sobre()),
+                  );
+                },
+              ),
+            ],
+          ),
+        ),
+    );
+  }
+
+  Widget buildButtonWithImage(
+    String imagePath,
+    String title,
+    VoidCallback onPressed,
+  ) {
+    return Padding(
+      padding: const EdgeInsets.only(left: 5, right: 5),
+      child: Column(
+        children: [
+          // Imagem
+          Image.asset(
+            imagePath,
+            width: 130,
+            height: 130,
+          ),
+          // Botão
+          ElevatedButton(
+            onPressed: onPressed,
+            style: ButtonStyle(
+              backgroundColor: MaterialStateProperty.all<Color>(Colors.white),
+              foregroundColor: MaterialStateProperty.all<Color>(Colors.red),
+              minimumSize: MaterialStateProperty.all(const Size(200, 50)),
+              shape: MaterialStateProperty.all<RoundedRectangleBorder>(
+                RoundedRectangleBorder(
+                  borderRadius: BorderRadius.circular(18.0),
+                  side: const BorderSide(
+                    color: Color(0xFFB71C1C),
+                    width: 2.0,
+                  ),
+                ),
+              ),
+            ),
+            child: Text(
+              // Texto do botão
+              title,
+              style: const TextStyle(fontSize: 20),
+            ),
+          ),
+        ],
       ),
-      body: Center(
-          child: Column(children: <Widget>[
-        Padding(
-          padding: const EdgeInsets.all(5),
-          child: Image.asset(
-            'assets/IconeOrientacoes.png',
-            width: 130,
-            height: 130,
-          ),
-        ),
-        ElevatedButton(
-          onPressed: () {
-            Navigator.push(
-              context,
-              MaterialPageRoute(builder: (context) => Orientacoes()),
-            );
-          },
-          style: ButtonStyle(
-              backgroundColor: MaterialStateProperty.all<Color>(Colors.white),
-              foregroundColor: MaterialStateProperty.all<Color>(Colors.red),
-              minimumSize: MaterialStateProperty.all(const Size(200, 50)),
-              shape: MaterialStateProperty.all<RoundedRectangleBorder>(
-                  RoundedRectangleBorder(
-                      borderRadius: BorderRadius.circular(18.0),
-                      side: const BorderSide(
-                          color: Color(0xFFB71C1C), width: 2.0)))),
-          child: const Text(
-            'Orientações',
-            style: TextStyle(fontSize: 20),
-          ),
-        ),
-        Padding(
-          padding: const EdgeInsets.all(5),
-          child: Image.asset(
-            'assets/IconeAcompanhamento.png',
-            width: 130,
-            height: 130,
-          ),
-        ),
-        ElevatedButton(
-          onPressed: () {
-            Navigator.push(
-              context,
-              MaterialPageRoute(builder: (context) => Orientacoes()),
-            );
-          },
-          style: ButtonStyle(
-              backgroundColor: MaterialStateProperty.all<Color>(Colors.white),
-              foregroundColor: MaterialStateProperty.all<Color>(Colors.red),
-              minimumSize: MaterialStateProperty.all(const Size(200, 50)),
-              shape: MaterialStateProperty.all<RoundedRectangleBorder>(
-                  RoundedRectangleBorder(
-                      borderRadius: BorderRadius.circular(18.0),
-                      side: const BorderSide(
-                          color: Color(0xFFB71C1C), width: 2.0)))),
-          child: const Text(
-            'Acompanhamento',
-            style: TextStyle(fontSize: 20),
-          ),
-        ),
-        Padding(
-          padding: const EdgeInsets.all(5),
-          child: Image.asset(
-            'assets/infos.png',
-            width: 120,
-            height: 120,
-          ),
-        ),
-        ElevatedButton(
-          onPressed: () {
-            Navigator.push(
-              context,
-              MaterialPageRoute(builder: (context) => Sobre()),
-            );
-          },
-          style: ButtonStyle(
-              backgroundColor: MaterialStateProperty.all<Color>(Colors.white),
-              foregroundColor: MaterialStateProperty.all<Color>(Colors.red),
-              minimumSize: MaterialStateProperty.all(const Size(200, 50)),
-              shape: MaterialStateProperty.all<RoundedRectangleBorder>(
-                  RoundedRectangleBorder(
-                      borderRadius: BorderRadius.circular(18.0),
-                      side: const BorderSide(
-                          color: Color(0xFFB71C1C), width: 2.0)))),
-          child: const Text(
-            'Informações',
-            style: TextStyle(fontSize: 20),
-          ),
-        ),
-      ])),
     );
   }
 }

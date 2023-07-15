@@ -6,12 +6,14 @@ class TelaEnfermagem extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      //AppBar
       appBar: AppBar(
         title: const Text('Enfermagem'),
         backgroundColor: Colors.red[900]
       ),
       body: ListView(
         children: <Widget>[
+          //Imagem Enfermagem
           Padding(
             padding: const EdgeInsets.all(10),
             child: Image.asset('assets/enfermagem2.jpg', 
@@ -35,6 +37,7 @@ class TelaEnfermagem extends StatelessWidget {
                   fontSize: 20,
                 ), 
               ),
+        //Informações de Higiene
         const Padding(
           padding: EdgeInsets.all(20),
           child: Text(
@@ -294,6 +297,7 @@ class TelaEnfermagem extends StatelessWidget {
             style: TextStyle(color: Colors.black, fontSize: 15)
             ),
         ),
+        //Informações do ambiente
         const Text(
           'Ambiente',
           textAlign: TextAlign.center,
@@ -490,6 +494,7 @@ class TelaEnfermagem extends StatelessWidget {
             style: TextStyle(color: Colors.black, fontSize: 15)
             ),
         ),
+        //Informações do Cateter
         const Text(
           'Cateter',
           textAlign: TextAlign.center,
@@ -578,6 +583,7 @@ class TelaEnfermagem extends StatelessWidget {
             style: TextStyle(color: Colors.black, fontSize: 15)
             ),
         ),
+        //Informações de atividade sexual
         const Text(
           'Atividade Sexual',
           textAlign: TextAlign.center,

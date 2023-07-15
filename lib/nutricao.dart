@@ -6,16 +6,19 @@ class TelaNutricao extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      //AppBar
       appBar: AppBar(
           title: const Text('Nutrição'), backgroundColor: Colors.red[900]),
       body: ListView(
         children: <Widget>[
+          //Imagem Nutrição
           Padding(
             padding: const EdgeInsets.all(10),
             child:
                 Image.asset('assets/nutricao2.jpg', width: 100, height: 100),
           ),
           const SizedBox(height: 10),
+          //Título Nutrição
           const Text('Orientações sobre nutrição',
               textAlign: TextAlign.center,
               style: TextStyle(
@@ -29,6 +32,7 @@ class TelaNutricao extends StatelessWidget {
                 'Cuidados com a nutrição na fase em que você se encontra, de pós transplante de medula óssea, são fundamentais para reestabelecer sua saúde e prevenir complicações. Se alimentar de forma adequada e com os cuidados a seguir recomendados é uma estratégia para melhor sua imunidade, recuperar sua força e prevenir infecções.',
                 style: TextStyle(color: Colors.black, fontSize: 15)),
           ),
+          //Informações Higiene
           const Text(
             "Higiene",
             textAlign: TextAlign.center,
@@ -68,6 +72,7 @@ class TelaNutricao extends StatelessWidget {
                 '•	No preparo dos alimentos NÃO utilizar tabuas para cortar que sejam de madeira, pois são bem mais difíceis de serem mantidas limpas, de preferência para tabuas de vidro, polietileno ou mármore. O ideal é que se utilize tabuas separadas para alimentos crus e alimentos cozidos, isso evite que o alimento cozido seja contaminado.',
                 style: TextStyle(color: Colors.black, fontSize: 15)),
           ),
+          //Informações Preparo
           const Text(
             'Preparo',
             textAlign: TextAlign.center,
@@ -137,6 +142,7 @@ class TelaNutricao extends StatelessWidget {
                 '•	Utilize água tratada que seja mineral, filtrada ou fervida.',
                 style: TextStyle(color: Colors.black, fontSize: 15)),
           ),
+          //Informações Não consumir
           const Text(
             'O que você NÃO DEVE CONSUMIR:',
             textAlign: TextAlign.center,
@@ -149,63 +155,63 @@ class TelaNutricao extends StatelessWidget {
           const Padding(
             padding: EdgeInsets.only(left: 30, top: 10, right: 30, bottom: 10),
             child: Text(
-                'o	Iogurtes ou bebidas com probióticos (ex. Yakult™, Keffir, Kombucha).',
+                '•	Iogurtes ou bebidas com probióticos (ex. Yakult™, Keffir, Kombucha).',
                 style: TextStyle(color: Colors.black, fontSize: 15)),
           ),
           const Padding(
             padding: EdgeInsets.only(left: 30, top: 10, right: 30, bottom: 10),
-            child: Text('o	Queijo minas, ricota, colonial.',
-                style: TextStyle(color: Colors.black, fontSize: 15)),
-          ),
-          const Padding(
-            padding: EdgeInsets.only(left: 30, top: 10, right: 30, bottom: 10),
-            child: Text(
-                'o	Creme de ovos, ovos crus ou mal passados e merengue cru.',
+            child: Text('•	Queijo minas, ricota, colonial.',
                 style: TextStyle(color: Colors.black, fontSize: 15)),
           ),
           const Padding(
             padding: EdgeInsets.only(left: 30, top: 10, right: 30, bottom: 10),
             child: Text(
-                'o	Carne de gado, frango ou peixe crua ou mal passada (ex. Sushi). ',
+                '•	Creme de ovos, ovos crus ou mal passados e merengue cru.',
                 style: TextStyle(color: Colors.black, fontSize: 15)),
           ),
           const Padding(
             padding: EdgeInsets.only(left: 30, top: 10, right: 30, bottom: 10),
             child: Text(
-                'o	Churrasco feito com carvão ou lenha, se for comer carne assada utilize churrasqueira ou forno elétrico.',
+                '•	Carne de gado, frango ou peixe crua ou mal passada (ex. Sushi). ',
                 style: TextStyle(color: Colors.black, fontSize: 15)),
           ),
           const Padding(
             padding: EdgeInsets.only(left: 30, top: 10, right: 30, bottom: 10),
             child: Text(
-                'o	Presunto, chester, salame, bacon, salsicha, salsichão, patê, sardinha ou atum em conserva, cogumelos, amendoim, mel.',
-                style: TextStyle(color: Colors.black, fontSize: 15)),
-          ),
-          const Padding(
-            padding: EdgeInsets.only(left: 30, top: 10, right: 30, bottom: 10),
-            child: Text('o	Leguminosas ou vegetais crus ou mal lavados.',
+                '•	Churrasco feito com carvão ou lenha, se for comer carne assada utilize churrasqueira ou forno elétrico.',
                 style: TextStyle(color: Colors.black, fontSize: 15)),
           ),
           const Padding(
             padding: EdgeInsets.only(left: 30, top: 10, right: 30, bottom: 10),
             child: Text(
-                'o	Molhos e lanches de lanchonetes, pastelarias e restaurantes.',
+                '•	Presunto, chester, salame, bacon, salsicha, salsichão, patê, sardinha ou atum em conserva, cogumelos, amendoim, mel.',
                 style: TextStyle(color: Colors.black, fontSize: 15)),
           ),
           const Padding(
             padding: EdgeInsets.only(left: 30, top: 10, right: 30, bottom: 10),
-            child: Text('o	Grão cruas (ex. gergelim).',
-                style: TextStyle(color: Colors.black, fontSize: 15)),
-          ),
-          const Padding(
-            padding: EdgeInsets.only(left: 30, top: 10, right: 30, bottom: 10),
-            child: Text('o	Frutas cruas sem lavar ou com casca.',
+            child: Text('•	Leguminosas ou vegetais crus ou mal lavados.',
                 style: TextStyle(color: Colors.black, fontSize: 15)),
           ),
           const Padding(
             padding: EdgeInsets.only(left: 30, top: 10, right: 30, bottom: 10),
             child: Text(
-                'o	Chimarrão, tererê, garapa ou caldo de cana, suplementos ou xaropes de ervas.',
+                '•	Molhos e lanches de lanchonetes, pastelarias e restaurantes.',
+                style: TextStyle(color: Colors.black, fontSize: 15)),
+          ),
+          const Padding(
+            padding: EdgeInsets.only(left: 30, top: 10, right: 30, bottom: 10),
+            child: Text('•	Grão cruas (ex. gergelim).',
+                style: TextStyle(color: Colors.black, fontSize: 15)),
+          ),
+          const Padding(
+            padding: EdgeInsets.only(left: 30, top: 10, right: 30, bottom: 10),
+            child: Text('•	Frutas cruas sem lavar ou com casca.',
+                style: TextStyle(color: Colors.black, fontSize: 15)),
+          ),
+          const Padding(
+            padding: EdgeInsets.only(left: 30, top: 10, right: 30, bottom: 10),
+            child: Text(
+                '•	Chimarrão, tererê, garapa ou caldo de cana, suplementos ou xaropes de ervas.',
                 style: TextStyle(color: Colors.black, fontSize: 15)),
           ),
           const Text(
