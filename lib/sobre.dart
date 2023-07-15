@@ -65,30 +65,6 @@ class Sobre extends StatelessWidget {
             child: Text('Luis Fernando Marcelino Braga',
                 style: TextStyle(color: Colors.black, fontSize: 15)),
           ),
-          const Text(
-            "Acompanhamento",
-            textAlign: TextAlign.center,
-            style: TextStyle(
-              color: Colors.black,
-              fontWeight: FontWeight.bold,
-              fontSize: 20,
-            ),
-          ),
-          const Padding(
-            padding: EdgeInsets.only(left: 30, top: 10, right: 30, bottom: 10),
-            child: Text('Cezar Henrique Krausburg Vargas',
-                style: TextStyle(color: Colors.black, fontSize: 15)),
-          ),
-          const Padding(
-            padding: EdgeInsets.only(left: 30, top: 10, right: 30, bottom: 10),
-            child: Text('Fernando Barcelos Rosito',
-                style: TextStyle(color: Colors.black, fontSize: 15)),
-          ),
-          const Padding(
-            padding: EdgeInsets.only(left: 30, top: 10, right: 30, bottom: 10),
-            child: Text('Fernando Ferrazza Toniolo Fernando Ferrazza Toniolo',
-                style: TextStyle(color: Colors.black, fontSize: 15)),
-          ),
         ],
       ),
     );

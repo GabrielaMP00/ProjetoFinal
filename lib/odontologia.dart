@@ -6,15 +6,18 @@ class TelaOdontologia extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      //Appbar
       appBar: AppBar(
           title: const Text('Odontologia'), backgroundColor: Colors.red[900]),
       body: ListView(children: <Widget>[
+        //Imagem odontologia
         Padding(
           padding: const EdgeInsets.all(10),
           child:
               Image.asset('assets/odontologia2.jpg', width: 100, height: 100),
         ),
         const SizedBox(height: 10),
+        //Título Principal
         const Text('Orientações sobre odontologia',
             textAlign: TextAlign.center,
             style: TextStyle(
